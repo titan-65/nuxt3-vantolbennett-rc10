@@ -1,0 +1,9 @@
+<script></script>
+<template>
+	<h1>Home</h1>
+	<section>
+		<div>
+			<h1>Blogs</h1>
+		</div>
+	</section>
+</template>
