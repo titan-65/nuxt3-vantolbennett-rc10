@@ -5,6 +5,14 @@ export default defineNuxtConfig({
         '@nuxtjs/tailwindcss'
     ],
     content: {
-
+        markdown: {
+            toc: {
+                depth: 3,
+                searchDepth: 3,
+            }
+        },
+        highlight: {
+            theme: "dracula-soft",
+        }
     }
 })
