@@ -13,5 +13,8 @@
     "@nuxtjs/tailwindcss": "^5.3.3",
     "@tailwindcss/typography": "^0.5.7",
     "nuxt": "3.0.0-rc.10"
+  },
+  "dependencies": {
+    "@notionhq/client": "^2.2.0"
   }
 }
