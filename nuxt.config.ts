@@ -5,6 +5,7 @@ export default defineNuxtConfig({
         '@nuxtjs/tailwindcss'
     ],
     content: {
+        documentDriven: true,
         markdown: {
             toc: {
                 depth: 3,
@@ -13,6 +14,14 @@ export default defineNuxtConfig({
         },
         highlight: {
             theme: "dracula-soft",
+        }
+    },
+    runtimeConfig: {
+        notionSecretKey: process.env.NUXT_NOTION_SECRET_KEY,
+        notionCodeDatabase: process.env.NUXT_NOTION_CODE_DATABASE,
+
+        public: {
+            apiBaseUrl: process.env.NUXT_PUBLIC_API_BASE_URL
         }
     }
 })
