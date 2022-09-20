@@ -4,6 +4,7 @@
       <MainNavbar />
 
       <slot />
+	  <MainFooter/>
     </section>
   </div>
 </template>
