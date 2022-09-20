@@ -45,8 +45,7 @@ const posts = await queryContent("posts").find();
             </NuxtLink>
 
             <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-              veritatis sint autem nesciunt, laudantium quia tempore delect
+              {{ n.description }}
             </p>
 
             <p class="mt-3 text-sm text-blue-500">21 October 2019</p>
