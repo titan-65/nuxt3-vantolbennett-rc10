@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+const projects = await queryContent("projects").find()
+
+</script>
 <template>
   <div>
     <section
@@ -95,5 +98,40 @@
         </div>
       </div>
     </div>
+    <section class="bg-white dark:bg-gray-900">
+      <div class="container px-6 py-10 mx-auto">
+        <h1
+          class="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-white"
+        >
+          Portfolio
+        </h1>
+
+        <p class="mt-4 text-center text-gray-500 dark:text-gray-300">
+          See all my latest projects in one swoops
+        </p>
+
+        <div
+          class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3"
+        >
+          <div
+            class="overflow-hidden bg-cover rounded-lg cursor-pointer h-96 group"
+            v-for="(p, i) in projects"
+            :style="{backgroundImage: `url(${p.image})`}"
+          >
+            <a :href="p.git"
+              class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100"
+            >
+              <h2 class="mt-4 text-2xl font-semibold text-white capitalize">
+                {{ p.title }}
+              </h2>
+              <p class="mt-2 text-lg tracking-wider text-blue-400 uppercase">
+                {{ p.tag }}
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
   </div>
 </template>
